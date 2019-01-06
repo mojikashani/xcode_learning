@@ -26,13 +26,13 @@ import UIKit
             updateButtonSelectionStates()
         }
     }
-    @IBInspectable var width: CGFloat = 220.0
-    @IBInspectable var height: CGFloat = 44.0
-    
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: width, height: height)
-        // if using in, say, a vertical stack view, the width is ignored
-    }
+//    @IBInspectable var width: CGFloat = 220.0
+//    @IBInspectable var height: CGFloat = 44.0
+//
+//    override var intrinsicContentSize: CGSize {
+//        return CGSize(width: width, height: height)
+//        // if using in, say, a vertical stack view, the width is ignored
+//    }
 
     //MARK: Initialization
     override init(frame: CGRect) {
