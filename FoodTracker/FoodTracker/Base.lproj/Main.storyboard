@@ -104,7 +104,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Va-DY-ele" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="368" width="252" height="44"/>
+                                        <rect key="frame" x="0.0" y="368" width="220" height="44"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                                 <size key="value" width="44" height="44"/>
@@ -129,16 +129,26 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New meal" id="Ni0-ez-T52">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="7by-H7-23U"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="k2d-O6-hBr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="7by-H7-23U">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="K1G-gR-X9h"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="k2d-O6-hBr">
+                            <connections>
+                                <segue destination="R8i-UV-jSG" kind="unwind" unwindAction="unwindToMealListWithSender:" id="1up-Sz-YV2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="6s0-29-oRt" id="7f5-Sf-chZ"/>
                         <outlet property="photoImageView" destination="qkS-6g-YPO" id="tuQ-zo-kAn"/>
                         <outlet property="ratingControl" destination="5Va-DY-ele" id="R4P-i0-WwZ"/>
+                        <outlet property="saveButton" destination="k2d-O6-hBr" id="txa-YH-po8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="R8i-UV-jSG" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="k1X-cK-em3">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="ffT-2y-QiW"/>
