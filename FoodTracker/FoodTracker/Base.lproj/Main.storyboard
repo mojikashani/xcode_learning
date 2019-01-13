@@ -56,6 +56,7 @@
                                     <outlet property="nameLabel" destination="eiq-lz-jQH" id="45c-WZ-0dn"/>
                                     <outlet property="photoImageView" destination="xaL-fj-k6Q" id="ksu-J8-cxx"/>
                                     <outlet property="ratingControl" destination="vko-5z-Xy7" id="Cu9-3g-lf1"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showDetails" id="uXu-Yw-C8V"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -104,7 +105,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Va-DY-ele" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="368" width="220" height="44"/>
+                                        <rect key="frame" x="0.0" y="368" width="252" height="44"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                                 <size key="value" width="44" height="44"/>
@@ -191,10 +192,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXW-lV-oi8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1146" y="485"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uXu-Yw-C8V"/>
+    </inferredMetricsTieBreakers>
 </document>
